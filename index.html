@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>Bac à sable</title>
+
+    <!-- <link href="./assets/bootstrap.css" rel="stylesheet"> -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    />
+    <link href="./style.css" rel="stylesheet" />
+  </head>
+
+  <!-- Aller sur www.figma.com pour créer sa signature -->
+  <!-- ensuite importer le code dans HTML  -->
+  <!-- et l'animer avec anime.js  ou utiliser les demos dispo sur animejs.com/documentation-->
+
+  <body>
+    <div id="run">
+      <div class="logs">
+        <input class="log current-time-log" value="not running" />
+        <input class="log progress-log" value="progress : 0%" />
+      </div>
+      <div class="large square el"></div>
+    </div>
+
+    <div id="lineDrawing">
+      <svg viewBox="0 0 280 100">
+        <g
+          fill="none"
+          fill-rule="evenodd"
+          stroke="currentColor"
+          stroke-width="1"
+          class="lines"
+        >
+          <path
+            d="M58 80V50.12C57.7 41.6 51.14 35 43 35a15 15 0 0 0 0 30h7.5v15H43a30 30 0 1 1 0-60c16.42 0 29.5 13.23 30 29.89V80H58z"
+            stroke-dasharray="316.85528564453125"
+            style="stroke-dashoffset: 313.362px"
+          ></path>
+          <path
+            d="M73 80V20H58v60h15z"
+            stroke-dasharray="150"
+            style="stroke-dashoffset: 150px"
+          ></path>
+          <path
+            d="M58 80V49.77C58.5 33.23 71.58 20 88 20a30 30 0 0 1 30 30v30h-15V50a15 15 0 0 0-15-15c-8.14 0-14.7 6.6-15 15.12V80H58zm75 0V20h-15v60h15z"
+            stroke-dasharray="441.1739501953125"
+            style="stroke-dashoffset: 441.174px"
+          ></path>
+          <path
+            d="M118 80V49.77C118.5 33.23 131.58 20 148 20a30 30 0 0 1 30 30v30h-15V50a15 15 0 0 0-15-15c-8.14 0-14.7 6.6-15 15.12V80h-15zm-7.5-60a7.5 7.5 0 1 1-7.48 8v-1c.25-3.9 3.5-7 7.48-7z"
+            stroke-dasharray="338.3053894042969"
+            style="stroke-dashoffset: 338.305px"
+          ></path>
+          <path
+            d="M133 65a15 15 0 0 1-15-15v-7.5h-15V50a30 30 0 0 0 30 30V65zm30 15V49.77C163.5 33.23 176.58 20 193 20a30 30 0 0 1 30 30v30h-15V50a15 15 0 0 0-15-15c-8.14 0-14.7 6.6-15 15.12V80h-15z"
+            stroke-dasharray="406.8699035644531"
+            style="stroke-dashoffset: 406.87px"
+          ></path>
+          <path
+            d="M238 65a15 15 0 0 1 0-30c8.1 0 14.63 6.53 15 15h-15v15h30V49.89C267.5 33.23 254.42 20 238 20a30 30 0 0 0 0 60V65z"
+            stroke-dasharray="301.8561706542969"
+            style="stroke-dashoffset: 301.856px"
+          ></path>
+          <path
+            d="M260.48 65a7.5 7.5 0 1 1-7.48 8v-1c.26-3.9 3.5-7 7.48-7z"
+            stroke-dasharray="47.128875732421875"
+            style="stroke-dashoffset: 47.1289px"
+          ></path>
+        </g>
+      </svg>
+    </div>
+
+    <div id="combinedFunctionBasedProp">
+      <div class="line">
+        <div data-duration="2000" class="square el"></div>
+      </div>
+      <div class="line">
+        <div data-duration="1500" class="square el"></div>
+      </div>
+      <div class="line">
+        <div data-duration="1000" class="square el"></div>
+      </div>
+    </div>
+
+    <div id="penner">
+      <div class="line">
+        <div
+          class="small stretched square linear"
+          style="transform: translateX(0px)"
+        ></div>
+      </div>
+      <div class="line">
+        <div
+          class="small stretched square InQuad"
+          style="transform: translateX(0px)"
+        ></div>
+      </div>
+      <div class="line">
+        <div
+          class="small stretched square InCubic"
+          style="transform: translateX(0px)"
+        ></div>
+      </div>
+      <div class="line">
+        <div
+          class="small stretched square InQuart"
+          style="transform: translateX(0px)"
+        ></div>
+      </div>
+      <div class="line">
+        <div
+          class="small stretched square InQuint"
+          style="transform: translateX(0px)"
+        ></div>
+      </div>
+      <div class="line">
+        <div
+          class="small stretched square InSine"
+          style="transform: translateX(0px)"
+        ></div>
+      </div>
+      <div class="line">
+        <div
+          class="small stretched square InExpo"
+          style="transform: translateX(0px)"
+        ></div>
+      </div>
+      <div class="line">
+        <div
+          class="small stretched square InCirc"
+          style="transform: translateX(0px)"
+        ></div>
+      </div>
+      <div class="line">
+        <div
+          class="small stretched square InBack"
+          style="transform: translateX(0px)"
+        ></div>
+      </div>
+      <div class="line">
+        <div
+          class="small stretched square OutQuad"
+          style="transform: translateX(0px)"
+        ></div>
+      </div>
+      <div class="line">
+        <div
+          class="small stretched square OutCubic"
+          style="transform: translateX(0px)"
+        ></div>
+      </div>
+      <div class="line">
+        <div
+          class="small stretched square OutQuart"
+          style="transform: translateX(0px)"
+        ></div>
+      </div>
+      <div class="line">
+        <div
+          class="small stretched square OutQuint"
+          style="transform: translateX(0px)"
+        ></div>
+      </div>
+      <div class="line">
+        <div
+          class="small stretched square OutSine"
+          style="transform: translateX(0px)"
+        ></div>
+      </div>
+      <div class="line">
+        <div
+          class="small stretched square OutExpo"
+          style="transform: translateX(0px)"
+        ></div>
+      </div>
+      <div class="line">
+        <div
+          class="small stretched square OutCirc"
+          style="transform: translateX(0px)"
+        ></div>
+      </div>
+      <div class="line">
+        <div
+          class="small stretched square OutBack"
+          style="transform: translateX(0px)"
+        ></div>
+      </div>
+      <div class="line">
+        <div
+          class="small stretched square InOutQuad"
+          style="transform: translateX(0px)"
+        ></div>
+      </div>
+      <div class="line">
+        <div
+          class="small stretched square InOutCubic"
+          style="transform: translateX(0px)"
+        ></div>
+      </div>
+      <div class="line">
+        <div
+          class="small stretched square InOutQuart"
+          style="transform: translateX(0px)"
+        ></div>
+      </div>
+      <div class="line">
+        <div
+          class="small stretched square InOutQuint"
+          style="transform: translateX(0px)"
+        ></div>
+      </div>
+      <div class="line">
+        <div
+          class="small stretched square InOutSine"
+          style="transform: translateX(0px)"
+        ></div>
+      </div>
+      <div class="line">
+        <div
+          class="small stretched square InOutExpo"
+          style="transform: translateX(0px)"
+        ></div>
+      </div>
+      <div class="line">
+        <div
+          class="small stretched square InOutCirc"
+          style="transform: translateX(0px)"
+        ></div>
+      </div>
+      <div class="line">
+        <div
+          class="small stretched square InOutBack"
+          style="transform: translateX(0px)"
+        ></div>
+      </div>
+    </div>
+
+    <script src="./assets/jquery.min.js" type="text/javascript"></script>
+    <script src="./assets/bootstrap.js" type="text/javascript"></script>
+    <script src="./node_modules/animejs/lib/anime.min.js"></script>
+    <script src="./script.js" type="text/javascript"></script>
+  </body>
+</html>
